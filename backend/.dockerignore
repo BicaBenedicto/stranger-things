@@ -5,6 +5,5 @@ actions/
 .git
 heroku.yml
 README.md
-trybe.yml
 jest.*
 .eslint*
