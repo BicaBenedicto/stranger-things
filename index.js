@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const { PORT_ENV, UPSIDEDOWN_MODE } = process.env;
 
 const express = require('express');
@@ -19,7 +20,7 @@ const strangerThingsService = new StrangerThingsService(
 
 app.use(cors());
 
-const hereIsTheUpsideDown = (UPSIDEDOWN_MODE === 'true' ? true : false) || true;
+const hereIsTheUpsideDown = (UPSIDEDOWN_MODE === 'true') || true;
 const PORT = PORT_ENV || 4000;
 
 app.get('/', (req, res) => {
